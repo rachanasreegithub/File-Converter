@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>File Converter</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="upload-container">
+            <h2>Convert Your Files Instantly</h2>
+            
+            <input type="file" id="fileInput" onchange="detectFileType()">
+
+            <label for="fromFormat">Convert From:</label>
+            <input type="text" id="fromFormat" readonly>
+
+            <label for="toFormat">Convert To:</label>
+            <select id="toFormat">
+                <option value="pdf">PDF</option>
+                <option value="docx">Word (.docx)</option>
+                <option value="csv">CSV</option>
+                <option value="xlsx">Excel (.xlsx)</option>
+                <option value="png">PNG Image</option>
+                <option value="jpg">JPG Image</option>
+                <option value="mp3">MP3 Audio</option>
+                <option value="mp4">MP4 Video</option>
+                <option value="zip">ZIP Archive</option>
+            </select>
+
+            <button onclick="convertFile()">Convert</button>
+            <div id="output"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
